@@ -37,23 +37,42 @@ class NO_26{
 
 class HDU1286{
 	private Scanner input=new Scanner(System.in);
-	
+	private int max=33000;
+	int []a=new int[max];
+
+	public void init(){
+		Arrays.fill(a,1);
+		for(int i=2;i<max;i++){
+				if(a[i]==1){
+					for(int j=i+i;j<n;j+=i){
+						a[j]=0;
+					}
+				}
+			}
+	}
+
 	public void solve(){
 		int t=input.nextInt();
+		init();
 		while(t-->0){
 			int n=input.nextInt();
 			int ans=0;
-			for(int i=1;i<n;i++){
-				if(gcd(i,n)==1)ans++;
+			int b[]=new int[n];
+			Arrays.fill(b,0);
+			for(int i=2;i<=n;i++){
+				if(a[i]==1 && n%a[i]==0){
+					int t=i;
+					while(t<=n){
+						b[t]=1;
+						t+=i;
+					}
+				}
+				else ans++;
 			}
+			
 			System.out.println(ans);
 		}
 		
-	}
-
-	public long gcd(long a,long b){
-		if(b==0)return a;
-		return gcd(b,a%b);
 	}
 }
 
