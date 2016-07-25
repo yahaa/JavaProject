@@ -5,7 +5,7 @@ import java.util.TreeSet;
 public class Main{
 	public Scanner input=new Scanner(new BufferedInputStream(System.in));
 	public static void main(String[]args){
-		HDU1286 a=new HDU1286();
+		POJ3276 a=new POJ3276();
 		a.solve();
 
 	}
@@ -240,4 +240,65 @@ class HDU1286{
 			System.out.println(euler(n));
 		}
 	}  
+}
+
+class POJ3276{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int n;
+	private int []f;
+	private int []dir;
+	private TreeMap<String,Integer>tt=new TreeMap<String,Integer>();
+
+
+	public void solve(){
+		tt.put("B",1);
+		tt.put("F",0);
+		while(input.hasNext()){
+			n=input.nextInt();
+			input.nextLine();
+			String s;
+			init();
+			for(int i=0;i<n;i++){
+				s=input.next();
+				dir[i]=tt.get(s);
+			}
+
+			int k=1;
+			int m=n;
+			for(int tk=1;tk<=n;tk++){
+				int tm=calc(tk);
+				if(tm>=0&&m>tm){
+					m=tm;
+					k=tk;
+				}
+			}
+			System.out.println(k+" "+m);
+		}
+	}
+
+	private void init(){
+		f=new int[n];
+		dir=new int[n];
+	}
+
+	private int calc(int k){
+		Arrays.fill(f,0);
+		int sum=0;
+		int ans=0;
+		for(int i=0;i+k<=n;i++){
+			if((sum+dir[i])%2==1){
+				ans++;
+				f[i]=1;
+			}
+			sum+=f[i];
+			if(i-k+1>=0)sum-=f[i-k+1];
+		}
+
+		for(int i=n-k+1;i<n;i++){
+			if((sum+dir[i])%2==1)return -1;
+			if(i-k+1>=0)sum-=f[i-k+1];
+		}
+		return ans;
+	}
+	
 }
