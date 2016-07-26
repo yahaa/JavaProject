@@ -5,7 +5,8 @@ public class LambdaTest{
 		a.test1(()->System.out.println("hahahaha"));
 		Ea ff=()->System.out.println("jklasjdklfasd");
 		ff.eat();
-		a.test2(()->System.out.println("jklajsd"));
+		String ya="1111";
+		a.test2(String->System.out.println(String));
 	}
 }
 
@@ -14,7 +15,7 @@ interface Ea{
 }
 
 interface Fa{
-	void fly();
+	void fly(String sss);
 }
 
 class TTT{
@@ -23,7 +24,7 @@ class TTT{
 	}
 
 	public void test2(Fa b){
-		b.fly();
+		b.fly("uuuuuu");
 	}
 
 }
