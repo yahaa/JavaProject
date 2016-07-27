@@ -5,7 +5,7 @@ import java.util.TreeSet;
 public class Main{
 	public Scanner input=new Scanner(new BufferedInputStream(System.in));
 	public static void main(String[]args){
-		POJ3276 a=new POJ3276();
+		HUD5761 a=new HUD5761();
 		a.solve();
 
 	}
@@ -301,4 +301,21 @@ class POJ3276{
 		return ans;
 	}
 	
+}
+
+
+class HUD5761{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+
+	public void solve(){
+		while(input.hasNext()){
+			double a,v1,v2;
+			a=input.nextDouble();
+			v1=input.nextDouble();
+			v2=input.nextDouble();
+			if(a==0)System.out.println("0.00000000\n");
+			else if(v1<=v2)System.out.printf("Infinity\n");
+			else System.out.printf("%.10f\n",v1*a/(v1*v1-v2*v2));
+		}
+	}
 }
