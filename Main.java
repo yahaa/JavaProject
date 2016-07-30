@@ -5,7 +5,7 @@ import java.util.TreeSet;
 public class Main{
 	public Scanner input=new Scanner(new BufferedInputStream(System.in));
 	public static void main(String[]args){
-		HUD5761 a=new HUD5761();
+		HDU1711 a=new HDU1711();
 		a.solve();
 
 	}
@@ -318,4 +318,53 @@ class HUD5761{
 			else System.out.printf("%.10f\n",v1*a/(v1*v1-v2*v2));
 		}
 	}
+
 }
+
+class HDU1711{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int []ob=new int[1000001];
+	private int []pat=new int[10001];
+	private int n,m;
+	public void solve(){
+		int t=input.nextInt();
+		while(t-->0){
+			n=input.nextInt();
+			m=input.nextInt();
+			for(int i=0;i<n;i++)ob[i]=input.nextInt();
+			for(int i=0;i<m;i++)pat[i]=input.nextInt();
+			int ans=kmp();
+			System.out.println(ans);
+		}
+
+	}
+
+	private int kmp(){
+		int []next=new int[m+1];
+		getNext(next);
+		int i=0,j=0;
+		while(j<m&&i<n){
+			if(j==-1||pat[j]==ob[i]){
+				i++;
+				j++;
+			}
+			else j=next[j];
+		}
+		if(j<m)return -1;
+		return i-j+1;
+	}
+
+	private void getNext(int []next){
+		next[0]=-1;
+		int j=0;
+		int k=-1;
+		while(j<m){
+			if(k==-1||pat[j]==pat[k])next[++j]=++k;
+			else k=next[k];
+		}
+	}
+
+
+}
+
+
