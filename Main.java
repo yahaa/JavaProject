@@ -1,370 +1,213 @@
 import java.util.*;
 import java.io.BufferedInputStream;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import static java.lang.Math.*;
+
 public class Main{
-	public Scanner input=new Scanner(new BufferedInputStream(System.in));
 	public static void main(String[]args){
-		HDU1711 a=new HDU1711();
+		HDU1705 a=new HDU1705();
 		a.solve();
-
 	}
 }
 
-class POJ3061{
+
+
+class HDU1701{
 	private Scanner input=new Scanner(new BufferedInputStream(System.in));
 	public void solve(){
 		int t=input.nextInt();
 		while(t-->0){
-			int n=input.nextInt();
-			int s=input.nextInt();
-			int []a=new int[n];
-			for(int i=0;i<n;i++)a[i]=input.nextInt();
-			int ans=n+1;
-			int sum=0;
-			int j=0,i=0;
-			while(j<n){
-				while(j<n&&sum<s){
-					sum+=a[j++];
-				}
-				
-				while(sum>=s){
-					ans=Math.min(ans,j-i);
-					sum-=a[i++];
+			double a=input.nextDouble();
+			double b=input.nextDouble();
+			for(int i=1;;i++){
+				if((int)(a*i/100)<(int)(b*i/100)){
+					System.out.println(i);
+					break;
 				}
 			}
-	
-			System.out.println((ans==n+1)?0:ans);
 		}
 	}
-	
+
 }
 
-class POJ3320{
+class HDU1702{
 	private Scanner input=new Scanner(new BufferedInputStream(System.in));
 
 	public void solve(){
-		int n=input.nextInt();
-		TreeMap<Integer,Integer>kind=new TreeMap<Integer,Integer>();
-		TreeMap<Integer,Integer>used=new TreeMap<Integer,Integer>();
-		int []a=new int[n];
-		for(int i=0;i<n;i++){
-			a[i]=input.nextInt();
-			kind.put(a[i],1);
-		}
-
-		int total=kind.size();
-		int i=0;
-		int j=0;
-		int ans=n;
-		while(j<n){
-			while(used.size()<total&&j<n){
-				int value=1;
-				if(used.containsKey(a[j]))value=used.get(a[j])+1;
-				used.put(a[j++],value);
-			}
-
-			while(used.size()>=total){
-				ans=Math.min(ans,j-i);
-				if(used.get(a[i])==1){
-					used.remove(a[i++]);
-				}
-				else {
-					int value=used.get(a[i]);
-					value--;
-					used.put(a[i++],value);
-				}
-
-			}
-		}
-		System.out.println(ans);
-
-	}
-}
-
-
-class CF23C{
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-
-	public void solve(){
-		while(input.hasNext()){
+		int t=input.nextInt();
+		input.nextLine();
+		while(t-->0){
 			int n=input.nextInt();
-			input.nextLine();
 			String s=input.nextLine();
-			TreeSet<Character>kind=new TreeSet<Character>();
-			TreeMap<Character,Integer>used=new TreeMap<Character,Integer>();
-			for(int i=0;i<s.length();i++){
-				kind.add(s.charAt(i));
-			}
 
-			int total=kind.size();
-			int i=0;
-			int j=0;
-			int ans=s.length();
-			while(j<s.length()){
-				while(used.size()<total&&j<s.length()){
-					int value=1;
-					if(used.containsKey(s.charAt(j)))value=used.get(s.charAt(j))+1;
-					used.put(s.charAt(j),value);
-					j++;
+			if(s.equals(" FIFO")){
+				Queue<Integer>qu=new LinkedList<Integer>();
+				while(n-->0){
+					String op=input.next();
+					if(op.equals("IN")){
+						int m=input.nextInt();
+						qu.add(m);
+					}
+					else{
+						if(!qu.isEmpty()){
+							System.out.println(qu.poll());
+						}
+						else System.out.println("None");
+					}
 				}
-
-				while(used.size()>=total){
-					ans=Math.min(ans,j-i);
-					if(used.get(s.charAt(i))==1)used.remove(s.charAt(i));
+			}
+			else {
+				Stack<Integer>sta=new Stack<Integer>();
+				while(n-->0){
+					String op=input.next();
+					if(op.equals("IN")){
+						int m=input.nextInt();
+						sta.push(m);
+					}
 					else {
-						int value=used.get(s.charAt(i));
-						value--;
-						used.put(s.charAt(i),value);
+						if(!sta.isEmpty())System.out.println(sta.pop());
+						else System.out.println("None");
 					}
-					i++;
 				}
 			}
-
-			System.out.println(ans);
-
 		}
-
 	}
+
 }
 
-class POJ2100{
+class HDU1703{
 	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-
+	
 	public void solve(){
 		while(input.hasNext()){
-			TreeMap<Long,Long>m=new TreeMap<Long,Long>();
-			long sum=input.nextLong();
-			long n=(long)Math.sqrt((double)sum)+1;
-			long s=0;
-			long i=1;
-			long j=1;
-			int ans=0;
-			while(j<n){
-				while(j<n&&s<sum){
-					s+=j*j;
-					j++;
-				}
-				while(s>=sum){
-					if(s==sum){
-						ans++;
-						m.put(i,j);
-					}
-					s-=i*i;
-					i++;
-				}
-			}
-
-			System.out.println(ans);
-			Set<Map.Entry<Long,Long>>entrys=m.entrySet();
-			for(Map.Entry<Long,Long>it:entrys){
-				long ii=it.getKey();
-				long jj=it.getValue();
-				System.out.print(jj-ii+" ");
-				for(long k=ii;k<jj;k++){
-					if(k!=jj-1)System.out.print(k+" ");
-					else System.out.println(k);
-				}
-			}
-
-		}
-	}
-}
-
-class BC23A{
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-	private long []a=new long[34];
-	public void  solve(){
-		for(int i=0;i<=33;i++)a[i]=(long)Math.pow(2,i);
-		int t=input.nextInt();
-		while(t-->0){
-			long n=input.nextLong();
-			int m=input.nextInt();
-			int ans=0;
-			if(m>=32)m=32;
-			for(int i=m;i>=0;i--){
-				ans+=n/a[i];
-				n%=a[i];
-			}
-			System.out.println(ans);
-		}
-	}
-}
-
-
-class BC23D{
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-	int max=100000000;
-	private int []a=new int[max+1];
-	public void solve(){
-		Arrays.fill(a,1);
-		int ans=0;
-		for(int i=2;i<=max;i++){
-			if(a[i]==1){
-				ans++;
-				for(int j=i+i;j<=max;j+=i){
-					a[j]=0;
-				}
-			}
-		}
-		System.out.println(ans);
-
-	}
-}
-
-
-class HDU1286{
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-
-	private int euler(int n){  	
-    	int ans=1;  
-    	int i;  
-    	for(i=2;i*i<=n;i++){  
-    	    if(n%i==0){  
-    	        n/=i;  
-    	        ans*=i-1;  
-    	        while(n%i==0){  
-    	            n/=i;  
-    	            ans*=i;  
-    	        }  
-    	    }  
-    	}  
-    	if(n>1)ans*=n-1;  
-    	return ans;  
-	}
-
-	public void solve(){
-		int t=input.nextInt();
-		while(t-->0){
 			int n=input.nextInt();
-			System.out.println(euler(n));
+			if(n==0)break;
+			if(n==1)System.out.println(0);
+			else if(n==2)System.out.println(5);
+			else if(n==3)System.out.println(15);
+			else System.out.println((2*n-4)*5);
 		}
-	}  
+	}
 }
 
-class POJ3276{
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-	private int n;
-	private int []f;
-	private int []dir;
-	private TreeMap<String,Integer>tt=new TreeMap<String,Integer>();
 
+class Union{
+	private int []an=new int[505];
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
 
 	public void solve(){
-		tt.put("B",1);
-		tt.put("F",0);
-		while(input.hasNext()){
-			n=input.nextInt();
-			input.nextLine();
-			String s;
-			init();
-			for(int i=0;i<n;i++){
-				s=input.next();
-				dir[i]=tt.get(s);
-			}
-
-			int k=1;
-			int m=n;
-			for(int tk=1;tk<=n;tk++){
-				int tm=calc(tk);
-				if(tm>=0&&m>tm){
-					m=tm;
-					k=tk;
+		int t=input.nextInt();
+		while(t-->0){
+			Arrays.fill(an,-1);
+			int n=input.nextInt();
+			int tn=n;
+			int m=input.nextInt();
+			while(m-->0){
+				int a=input.nextInt();
+				int b=input.nextInt();
+				int pa=findp(a);
+				int pb=findp(b);
+				if(pa!=pb){
+					n--;
+					an[pa]+=an[pb];
+					an[pb]=pa;
 				}
 			}
-			System.out.println(k+" "+m);
+
+			int ans=tn*(tn-1)/2;
+			for(int i=1;i<=tn;i++){
+				if(an[i]<0){
+					int tt=abs(an[i]);
+					ans-=tt*(tt-1)/2;
+				}
+			}
+			System.out.println(ans);
 		}
+	}
+
+	private int findp(int a){
+		int p=a;
+		while(an[p]>=0){
+			p=an[p];
+		}
+		return p;
+	}
+}
+
+class HDU1704{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int [][]g=new int[501][501];
+	private int n,m;
+
+	public void floyd(){
+		for(int k=1;k<=n;k++){
+			for(int i=1;i<=n;i++){
+				if(g[i][k]==1){
+					for(int j=1;j<=n;j++){
+						if(g[k][j]==1)g[i][j]=1;
+					}
+				}
+			}
+		}
+	}
+
+	private int getAns(){
+		int ans=0;
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=n;j++){
+				if(i==j)continue;
+				if(g[i][j]==0&&g[j][i]==0)ans++;
+			}
+		}
+		return ans/2;
 	}
 
 	private void init(){
-		f=new int[n];
-		dir=new int[n];
+		n=input.nextInt();
+		m=input.nextInt();
+		for(int i=0;i<=n;i++)Arrays.fill(g[i],0);
 	}
 
-	private int calc(int k){
-		Arrays.fill(f,0);
-		int sum=0;
-		int ans=0;
-		for(int i=0;i+k<=n;i++){
-			if((sum+dir[i])%2==1){
-				ans++;
-				f[i]=1;
-			}
-			sum+=f[i];
-			if(i-k+1>=0)sum-=f[i-k+1];
-		}
-
-		for(int i=n-k+1;i<n;i++){
-			if((sum+dir[i])%2==1)return -1;
-			if(i-k+1>=0)sum-=f[i-k+1];
-		}
-		return ans;
-	}
-	
-}
-
-
-class HUD5761{
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-
-	public void solve(){
-		while(input.hasNext()){
-			double a,v1,v2;
-			a=input.nextDouble();
-			v1=input.nextDouble();
-			v2=input.nextDouble();
-			if(a==0)System.out.println("0.00000000\n");
-			else if(v1<=v2)System.out.printf("Infinity\n");
-			else System.out.printf("%.10f\n",v1*a/(v1*v1-v2*v2));
-		}
-	}
-
-}
-
-class HDU1711{
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-	private int []ob=new int[1000001];
-	private int []pat=new int[10001];
-	private int n,m;
 	public void solve(){
 		int t=input.nextInt();
 		while(t-->0){
-			n=input.nextInt();
-			m=input.nextInt();
-			for(int i=0;i<n;i++)ob[i]=input.nextInt();
-			for(int i=0;i<m;i++)pat[i]=input.nextInt();
-			int ans=kmp();
-			System.out.println(ans);
-		}
-
-	}
-
-	private int kmp(){
-		int []next=new int[m+1];
-		getNext(next);
-		int i=0,j=0;
-		while(j<m&&i<n){
-			if(j==-1||pat[j]==ob[i]){
-				i++;
-				j++;
+			init();
+			while(m-->0){
+				int a=input.nextInt();
+				int b=input.nextInt();
+				g[a][b]=1;
 			}
-			else j=next[j];
+			floyd();
+			System.out.println(getAns());
 		}
-		if(j<m)return -1;
-		return i-j+1;
+		
+	}
+}
+
+
+class HDU1705{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+
+	public void solve(){
+		while(true){
+			int x1=input.nextInt();
+			int y1=input.nextInt();
+			int x2=input.nextInt();
+			int y2=input.nextInt();
+			int x3=input.nextInt();
+			int y3=input.nextInt();
+			if(x1==0&&x2==0&&x3==0&&y1==0&&y2==0&&y3==0)break;
+			double s=abs((x2-x1)*(y3-y1)-(y2-y1)*(x3-x1));
+			int all=gcd(abs(y2-y1),abs(x2-x1))+gcd(abs(y3-y2),abs(x3-x2))+gcd(abs(y3-y1),abs(x3-x1));
+			System.out.println((int)((s-all+2)/2));
+			
+		}
+
 	}
 
-	private void getNext(int []next){
-		next[0]=-1;
-		int j=0;
-		int k=-1;
-		while(j<m){
-			if(k==-1||pat[j]==pat[k])next[++j]=++k;
-			else k=next[k];
-		}
+	public int gcd(int a,int b){
+		if(b==0)return a;
+		return gcd(b,a%b);
 	}
 
 
 }
-
-
