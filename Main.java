@@ -4,7 +4,7 @@ import static java.lang.Math.*;
 
 public class Main{
 	public static void main(String[]args){
-		HDU1705 a=new HDU1705();
+		HDU1710 a=new HDU1710();
 		a.solve();
 	}
 }
@@ -209,5 +209,317 @@ class HDU1705{
 		return gcd(b,a%b);
 	}
 
+
+}
+
+
+class HDU1706{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int [][]g;
+	private int [][]a;
+	private int n,m;
+	private int maxn=Integer.MAX_VALUE;
+	public void solve(){
+		while(input.hasNext()){
+			init();
+			floyd();
+			int ans=-1;
+			int count=0;
+			for(int i=1;i<=n;i++){
+				for(int j=1;j<i;j++){
+					if(g[i][j]==maxn)continue;
+					if(g[i][j]>ans){
+						ans=g[i][j];
+						count=a[i][j];
+					}
+					else if(ans==g[i][j]){
+						count+=a[i][j];
+					}
+				}
+			}
+			System.out.println(ans+" "+count);
+			
+		}
+	}
+
+	private void floyd(){
+		for(int k=1;k<=n;k++){
+			for(int i=1;i<=n;i++){
+				if(g[i][k]>=maxn||i==k)continue;
+				for(int j=1;j<=n;j++){
+					if(g[k][j]>=maxn||i==j||j==k)continue;
+					if(g[i][j]>g[i][k]+g[k][j]){
+						g[i][j]=g[i][k]+g[k][j];
+						a[i][j]=a[i][k]*a[k][j];
+					}
+					else if(g[i][j]==g[i][k]+g[k][j]){
+						a[i][j]+=a[i][k]*a[k][j];
+					}
+				}
+			
+			}
+		}
+	}
+
+
+
+	private void init(){
+		n=input.nextInt();
+		m=input.nextInt();
+		g=new int[n+1][n+1];
+		a=new int[n+1][n+1];
+		for(int i=0;i<=n;i++){
+			Arrays.fill(g[i],maxn);
+			Arrays.fill(a[i],0);
+		}
+
+		int i,j,v;
+		while(m-->0){
+			i=input.nextInt();
+			j=input.nextInt();
+			v=input.nextInt();
+			if(i==j)continue;
+			if(g[i][j]>v){
+				g[i][j]=g[j][i]=v;
+				a[i][j]=a[j][i]=1;
+			}
+			else if(g[i][j]==v){
+				a[i][j]++;
+				a[j][i]++;
+			}
+		}
+
+	}
+}
+
+class Cn{
+	private int []a=new int[26];
+	public Cn(){
+		for(int i=0;i<26;i++)a[i]=0;
+	}
+	public void add(Cn f1,Cn f2){
+		for(int i=0;i<26;i++){
+			a[i]+=f1.a[i]+f2.a[i];
+		}
+	}
+	public void init(String s){
+		for(int i=0;i<s.length();i++){
+			int index=(int)(s.charAt(i)-'a');
+			a[index]++;
+		}
+	}
+
+	public void print(){
+		for(int i=0;i<26;i++){
+			System.out.println((char)(i+'a')+":"+a[i]);
+		}
+	}
+}
+
+
+class HDU1708{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private Cn []a;
+	public void solve(){
+		int t=input.nextInt();
+		input.nextLine();
+		for(int j=0;j<t;j++){
+			a=new Cn[51];
+			String s=input.nextLine();
+			String []ar=s.split(" ");
+			a[0]=new Cn();
+			a[1]=new Cn();
+			a[0].init(ar[0]);
+			a[1].init(ar[1]);
+			int n=Integer.valueOf(ar[2]);
+			for(int i=2;i<=n;i++){
+				a[i]=new Cn();
+				a[i].add(a[i-1],a[i-2]);
+			}
+
+			a[n].print();
+			System.out.println();
+		}
+		
+	}
+
+}
+
+class Student{
+	private String name;
+	private int [][]busy=new int[15][15];
+
+	public Student(){
+		name=null;
+		for(int i=0;i<15;i++)
+			Arrays.fill(busy[i],0);
+	}
+
+	public void setName(String name){
+		this.name=name;
+	}
+
+	public void setBusy(int d,int s,int e){
+		for(int i=s;i<=e;i++)busy[d][i]=1;
+	}
+	
+	public boolean isBusy(int d,int s,int e){
+		for(int i=s;i<=e;i++){
+			if(busy[d][i]==1)return true; 
+		}
+		return false;
+	}
+
+	public String getName(){
+		return name;
+	}
+
+}
+
+
+class HDU1707{
+	Student []stu=new Student[220];
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	public void solve(){
+		int t=input.nextInt();
+		while(t-->0){
+			int n=input.nextInt();
+			for(int i=1;i<=n;i++){
+				String name=input.next();
+				int k=input.nextInt();
+				Student tm=new Student();
+				while(k-->0){
+					int d=input.nextInt();
+					int s=input.nextInt();
+					int e=input.nextInt();
+					tm.setBusy(d,s,e);
+				}
+				tm.setName(name);
+				stu[i]=tm;
+			}
+
+			int m=input.nextInt();
+			while(m-->0){
+				int d=input.nextInt();
+				int s=input.nextInt();
+				int e=input.nextInt();
+				String []ans=new String[220];
+				int c=0;
+				for(int i=1;i<=n;i++){
+					if(stu[i].isBusy(d,s,e)){
+						ans[c++]=stu[i].getName();
+					}
+				}
+
+				if(c>0){
+					Arrays.sort(ans,0,c);
+					for(int i=0;i<c-1;i++){
+						System.out.print(ans[i]+" ");
+					}
+					System.out.println(ans[c-1]);
+				}
+				else System.out.println("None");
+
+			}
+		}
+	}
+}
+
+class HDU1709{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private final int maxn=10000+5;
+	private int []x;
+	private int []dp=new int[maxn];
+	private boolean []vist=new boolean[maxn];
+
+
+	public void solve(){
+		while(input.hasNext()){
+			init();
+			int n=input.nextInt();
+			x=new int[n+1];
+			int sum=0;
+			for(int i=1;i<=n;i++){
+				x[i]=input.nextInt();
+				sum+=x[i];
+			}
+
+			for(int i=1;i<=n;i++){
+				Arrays.fill(dp,0);
+				for(int j=0;j<=sum;j++){
+					if(vist[j]){
+						dp[j+x[i]]=1;
+						dp[abs(j-x[i])]=1;
+					}
+				}
+				for(int j=0;j<=sum;j++){
+					if(dp[j]==1)vist[j]=true;
+				}
+			}
+
+
+			int ans=0;
+			for(int i=1;i<=sum;i++){
+				if(!vist[i])ans++;
+			}
+
+			System.out.println(ans);
+			if(ans>0){
+				int tt=0;
+				for(int i=1;i<=sum;i++){
+					if(!vist[i]){
+						if(tt++==0)System.out.print(i);
+						else System.out.print(" "+i);
+					}
+				}
+				System.out.println();
+			}
+
+		}
+	}
+
+	public void init(){
+		Arrays.fill(vist,false);
+		vist[0]=true;
+	}
+}
+
+
+class HDU1710{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int n;
+	private int []pre;
+	private int []ins;
+	private Queue<Integer>ans;
+	
+
+	private void init(){
+		pre=new int[n];
+		ins=new int[n];
+		ans=new LinkedList<Integer>();
+	}
+
+	private void build(int a,int b,int n){
+		if(n<1)return;
+		int i;
+		for(i=0;pre[a]!=ins[b+i];i++);
+		build(a+1,b,i);
+		build(a+i+1,b+i+1,n-i-1);
+		ans.add(pre[a]);
+
+	}
+
+	public void solve(){
+		while(input.hasNext()){
+			n=input.nextInt();
+			init();
+			for(int i=0;i<n;i++)pre[i]=input.nextInt();
+			for(int i=0;i<n;i++)ins[i]=input.nextInt();
+			build(0,0,n);
+			System.out.print(ans.poll());
+			while(!ans.isEmpty())System.out.print(" "+ans.poll());
+			System.out.println();
+		}
+	}
 
 }
