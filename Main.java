@@ -4,7 +4,7 @@ import static java.lang.Math.*;
 
 public class Main{
 	public static void main(String[]args){
-		HDU1710 a=new HDU1710();
+		TZ a=new TZ();
 		a.solve();
 	}
 }
@@ -522,4 +522,46 @@ class HDU1710{
 		}
 	}
 
+}
+
+class TZ{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int n;
+	private int []pos;
+	private int []ins;
+	private Queue<Integer>ans;
+	
+
+	private void init(){
+		pos=new int[n];
+		ins=new int[n];
+		ans=new LinkedList<Integer>();
+	}
+
+	private void build(int a,int b,int n){
+		if(n==1){
+			ans.add(pos[a]);
+			return;
+		}
+		if(n<=0)return;
+		int i;
+		for(i=0;pos[a]!=ins[b+i];i++);
+		build(a-n+i,b,i);
+		build(a-1,b+i+1,n-i-1);
+		
+
+	}
+
+	public void solve(){
+		while(input.hasNext()){
+			n=input.nextInt();
+			init();
+			for(int i=0;i<n;i++)pos[i]=input.nextInt();
+			for(int i=0;i<n;i++)ins[i]=input.nextInt();
+			build(n-1,0,n);
+			System.out.print(ans.poll());
+			while(!ans.isEmpty())System.out.print(" "+ans.poll());
+			System.out.println();
+		}
+	}
 }
