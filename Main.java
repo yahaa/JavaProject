@@ -1,10 +1,11 @@
 import java.util.*;
 import java.io.BufferedInputStream;
+import java.math.*;
 import static java.lang.Math.*;
 
 public class Main{
 	public static void main(String[]args){
-		HDU1710 a=new HDU1710();
+		HDU1712 a=new HDU1712();
 		a.solve();
 	}
 }
@@ -523,3 +524,77 @@ class HDU1710{
 	}
 
 }
+
+
+class I{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	
+	public BigInteger gcd(BigInteger a,BigInteger b){
+		if(b==BigInteger.ZERO)return a;
+		else return gcd(b,a.mod(b));
+	}
+	public void solve(){
+		while(input.hasNext()){
+			int n=input.nextInt();
+			BigInteger a=new BigInteger("1");
+			BigInteger t;
+			for(int i=0;i<n;i++){
+				t=input.nextBigInteger();
+				a=a.multiply(t);
+			}
+			
+			int m=input.nextInt();
+			BigInteger b=new BigInteger("1");
+			for(int i=0;i<m;i++){
+				t=input.nextBigInteger();
+				b=b.multiply(t);
+			}
+			
+			BigInteger ans=gcd(a,b);
+			String tt=ans.toString();
+			int le=tt.length();
+			if(le>9){
+				System.out.println(tt.substring(le-9));
+			}
+			else System.out.println(tt);
+		}
+	}
+	
+}
+
+class HDU1712{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private final int mx=105;
+	private int []dp=new int[mx];
+
+	private void init(){
+		Arrays.fill(dp,0);
+	}
+
+	public void solve(){
+		int n,m;
+		while(input.hasNext()){
+			n=input.nextInt();
+			m=input.nextInt();
+			if(n==0&&m==0)break;
+			init();
+			int [][]g=new int[n+1][m+1];
+			for(int i=1;i<=n;i++){
+				for(int j=1;j<=m;j++){
+					g[i][j]=input.nextInt();
+				}
+			}
+
+			for(int i=1;i<=n;i++){
+				for(int j=m;j>=0;j--){
+					for(int k=1;k<=j;k++){
+						dp[j]=max(dp[j],dp[j-k]+g[i][k]);
+					}
+				}
+			}
+
+			System.out.println(dp[m]);
+		}
+	}
+}
+
