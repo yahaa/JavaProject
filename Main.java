@@ -5,12 +5,8 @@ import static java.lang.Math.*;
 
 public class Main{
 	public static void main(String[]args){
-<<<<<<< HEAD
 		HDU1712 a=new HDU1712();
-=======
-		TZ a=new TZ();
->>>>>>> 8a1fda681c66ee4eebd57b61315882fb4fa7c775
-		a.solve();
+	
 	}
 }
 
@@ -529,7 +525,7 @@ class HDU1710{
 
 }
 
-<<<<<<< HEAD
+
 
 class I{
 	private Scanner input=new Scanner(new BufferedInputStream(System.in));
@@ -603,7 +599,7 @@ class HDU1712{
 	}
 }
 
-=======
+
 class TZ{
 	private Scanner input=new Scanner(new BufferedInputStream(System.in));
 	private int n;
@@ -645,4 +641,4 @@ class TZ{
 		}
 	}
 }
->>>>>>> 8a1fda681c66ee4eebd57b61315882fb4fa7c775
+
