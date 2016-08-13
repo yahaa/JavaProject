@@ -5,7 +5,8 @@ import static java.lang.Math.*;
 
 public class Main{
 	public static void main(String[]args){
-		HDU1712 a=new HDU1712();
+		HDU1717 a=new HDU1717();
+		a.solve();
 	
 	}
 }
@@ -639,6 +640,59 @@ class TZ{
 			while(!ans.isEmpty())System.out.print(" "+ans.poll());
 			System.out.println();
 		}
+	}
+}
+
+
+class HDU1717{
+	private Scanner input=new Scanner(System.in);
+
+	public void solve(){
+		int tt=input.nextInt();
+		input.nextLine();
+		while(tt-->0){
+			String []t={null,null};
+			String s=input.nextLine();
+			if(s.contains("(")){
+				int i=s.indexOf("(");
+				if(s.charAt(2)!='('){
+					t[0]=s.substring(2,i);
+					t[1]=s.substring(i+1,s.length()-1);
+				}
+				else t[1]=s.substring(i+1,s.length()-1);
+			}
+			else {
+				t[0]=s.substring(2);
+				t[1]=null;
+			}
+			
+			if(t[1]==null){
+				long x=Long.valueOf(t[0]);
+				long y=(long)pow(10,t[0].length());
+				System.out.printf((x/gcd(x,y))+"/"+(y/gcd(x,y)));
+			}
+			else if(t[0]==null){
+				long x=Long.valueOf(t[1]);
+				long y=(long)pow(10,t[1].length())-1;
+				System.out.printf((x/gcd(x,y))+"/"+(y/gcd(x,y)));
+			}
+			else{
+				long a=Long.valueOf(t[0]);
+				long b=Long.valueOf(t[1]);
+				long x=((long)pow(10,t[1].length())-1)*a+b;
+				long y=(long)pow(10,t[0].length()+t[1].length())-(long)pow(10,t[0].length());
+				System.out.printf((x/gcd(x,y))+"/"+(y/gcd(x,y)));
+			}
+			System.out.println();
+			
+			
+			
+		}
+	}
+
+	public long gcd(long a,long b){
+		if(b==0)return a;
+		return gcd(b,a%b);
 	}
 }
 
