@@ -1,4 +1,3 @@
-package Swing;
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 import org.jb2011.lnf.beautyeye.ch3_button.BEButtonUI;
 
@@ -153,5 +152,3 @@ public class SwingTest3 {
 	  new SwingTest3();
   }
 }
-
-

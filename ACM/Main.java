@@ -7,7 +7,7 @@ import static java.lang.Character.*;
 
 public class Main{
 	public static void main(String[]args){
-		B519 a=new B519();
+		B459 a=new B459();
 		a.solve();
 	}
 }
@@ -469,6 +469,68 @@ class B519{
 		IO.println(ans1);
 		IO.println(ans2);
 
+	}
+}
+
+
+class RUU implements Runnable{
+	public void run(){
+		for(int i=0;i<100;i++)
+			IO.println("hahaha");
+	}
+}
+
+class B467{
+	public void solve(){
+		int n=IO.input.nextInt();
+		int m=IO.input.nextInt();
+		int k=IO.input.nextInt();
+		int []a=new int[1005];
+		for(int i=0;i<m+1;i++){
+			a[i]=IO.input.nextInt();
+		}
+		int ans=0;
+		for(int i=0;i<m;i++){
+			if(oneOfAB(a[i],a[m])<=k)ans++;
+		}
+		IO.println(ans);
+	}
+
+	private int oneOfAB(int a,int b){
+		int t=a^b,con=0;
+		while(t>0){
+			con++;
+			t-=t&-t;
+		}
+		return con;
+	}
+}
+
+
+class B459{
+	public void solve(){
+		int n=IO.input.nextInt();
+		int mx=1;
+		int mn=1000000000;
+		Map<Integer,Integer>mp=new TreeMap<Integer,Integer>();
+		for(int i=0;i<n;i++){
+			int t=IO.input.nextInt();
+			mx=max(mx,t);
+			mn=min(mn,t);
+			if(mp.containsKey(t)){
+				int v=mp.get(t);
+				v++;
+				mp.put(t,v);
+			}
+			else mp.put(t,1);
+		}
+		long ans=0;
+		if(mx==mn){
+			int t=mp.get(mn);
+			ans=(long)t*(t-1)/2;
+		}
+		else ans=(long)mp.get(mx)*mp.get(mn);
+		IO.println((mx-mn)+" "+ans);
 	}
 }
 
