@@ -1,4 +1,3 @@
-package com.zihua;
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 import org.jb2011.lnf.beautyeye.ch3_button.BEButtonUI;
 
@@ -43,19 +42,19 @@ public class LoginWin {
 	      login.addMouseListener(new MouseAdapter(){
 	        @Override
 	        public void mouseClicked(MouseEvent e){
-		          if(null == username.getText() || "".equals(username.getText())){
-		        	  JOptionPane.showMessageDialog(null, "用户名不能为空");
-		        	  return;
-		          }
-		          if(null == password.getPassword() || "".equals(password.getPassword())){
-		        	  JOptionPane.showMessageDialog(null, "密码不能为空");
-		        	  return;
-		          }
-		          if(null != username.getText() && "wbb".equals(username.getText()) && null != password.getPassword() && "123".equals(password.getPassword())) {
-		        	  JOptionPane.showMessageDialog(null, "登录成功，欢迎您：" + username.getText());
-		          } else {
-		        	  JOptionPane.showMessageDialog(null, "用户名密码错误，请重新输入");
-		          }
+	        	String user=username.getText();
+	        	String pass=new String(password.getPassword());
+	        	System.out.println(user);
+	        	System.out.println(pass);
+	        	if(user.compareTo("yahaa")==0&&pass.compareTo("123")==0){
+	        		JOptionPane.showMessageDialog(null, "登录成功，欢迎您：" + username.getText());
+	        		//f.setVisible(false);
+	        	}
+	        	else {
+	        		JOptionPane.showMessageDialog(null, "用户名密码错误，请重新输入");
+	        		return;
+	        	}
+		 
 	        }
 	      
 	      });
@@ -79,7 +78,6 @@ public class LoginWin {
     //按钮
     JPanel cent=new JPanel();
     JPanel bt = new JPanel();
-    
     JPanel pp=new JPanel();
     
    
