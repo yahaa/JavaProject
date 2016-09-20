@@ -19,7 +19,6 @@ public class LoginWin {
   private JLabel blank1 = null;
   private JLabel blank2 = null;
   private JMenuBar menuBar = null;
-
   public LoginWin(){
     try{
 	      BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;

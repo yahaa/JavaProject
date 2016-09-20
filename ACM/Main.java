@@ -7,7 +7,7 @@ import static java.lang.Character.*;
 
 public class Main{
 	public static void main(String[]args){
-		HDU1002 a=new HDU1002();
+		A278 a=new A278();
 		a.solve();
 	}
 }
@@ -535,28 +535,20 @@ class B459{
 }
 
 
-class HDU1002{
-	private double []a=new double[100000+5];
-	private BigInteger am=new BigInteger("1000000");
-	private void get(){
-		a[0]=0;
-		for(int i=1;i<=100000;i++){
-			a[i]=a[i-1]+1.0/(i*i);
-		}
-	}
+class A278{
 	public void solve(){
-		get();
-		while(IO.input.hasNext()){
-			String s=IO.input.nextLine();
-			BigInteger t=BigInteger.valueOf(s);
-			if(t>am){
-				System.out.printf("1.64493\n");
-			}
-			else{
-				int t=am.toInt();
-				System.out.printf("%.5f\n",a[t]);
-			} 
+		int []a=new int[105];
+		int n=IO.input.nextInt();
+		a[1]=0;
+		for(int i=2;i<n+2;i++){
+			a[i]=a[i-1]+IO.input.nextInt();
 		}
+		int s=IO.input.nextInt();
+		int t=IO.input.nextInt();
+		int tt=max(s,t);
+		int ss=min(s,t);
+		int ans=min(a[tt]-a[ss],a[n+1]-a[tt]+a[ss]);
+		IO.println(ans);
 	}
 }
 
