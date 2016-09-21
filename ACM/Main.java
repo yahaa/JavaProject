@@ -7,7 +7,7 @@ import static java.lang.Character.*;
 
 public class Main{
 	public static void main(String[]args){
-		A278 a=new A278();
+		B538 a=new B538();
 		a.solve();
 	}
 }
@@ -550,5 +550,30 @@ class A278{
 		int ans=min(a[tt]-a[ss],a[n+1]-a[tt]+a[ss]);
 		IO.println(ans);
 	}
+}
+
+class B538{
+	public void solve() {
+        int n=IO.input.nextInt();
+        List<Integer> res=new ArrayList<>();
+        while (n>0) {
+            int cur=0;
+            int tmp=n;
+            int mul=1;
+            while(tmp>0) {
+                if(tmp%10>0)cur+=mul;
+                tmp/=10;
+                mul*=10;
+            }
+            n-=cur;
+            res.add(cur);
+        }
+        IO.println(res.size());
+        for (int i=0; i<res.size(); ++i) {
+            if (i>0) IO.print(" ");
+            System.out.print(res.get(i));
+        }
+        System.out.println();
+    }
 }
 
