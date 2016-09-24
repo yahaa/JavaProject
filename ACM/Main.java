@@ -7,7 +7,7 @@ import static java.lang.Character.*;
 
 public class Main{
 	public static void main(String[]args){
-		B538 a=new B538();
+		B456 a=new B456();
 		a.solve();
 	}
 }
@@ -577,3 +577,46 @@ class B538{
     }
 }
 
+class B456{
+	public void solve(){
+		String s=IO.input.nextLine();
+		int n=s.length();
+		if(n>2){
+			int t=s.charAt(n-1)-'0';
+			int t1=s.charAt(n-2)-'0';
+			t=t1*10+t;
+		
+			if(t%4==0)IO.println(4);
+			else IO.println(0);
+		}
+		else {
+			Integer a=Integer.valueOf(s);
+			if(a%4==0)IO.println(4);
+			else IO.println(0);
+		}
+		
+		
+
+	}
+}
+
+class C719{
+	public void solve(){
+		int n=IO.input.nextInt();
+		int t=IO.input.nextInt();
+		IO.input.next();
+		StringBuilder s=IO.input.nextLine();
+		int index=0;
+		for(int i=0;i<n;i++){
+			if(s.charAt(i)=='.'){
+				index=i;
+				break;
+			}
+		}
+		for(int i=index+1;i<n;i++){
+			if(s.charAt(i)>='5'){
+				
+			}
+		}
+	}
+}
