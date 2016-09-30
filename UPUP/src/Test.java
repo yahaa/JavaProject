@@ -1,4 +1,6 @@
 import java.io.BufferedInputStream;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 import static java.lang.Math.*;
 
@@ -7,7 +9,7 @@ import static java.lang.Math.*;
  */
 public class Test {
     public static void main(String[]args){
-       A116 a=new A116();
+       B427 a=new B427();
         a.solve();
     }
 }
@@ -28,5 +30,23 @@ class A116{
         System.out.println(ans);
     }
 
+}
+
+class B427{
+    private Scanner input =new Scanner(new BufferedInputStream(System.in));
+    private Integer []a;
+    public void solve(){
+        int n=input.nextInt();
+        int k=input.nextInt();
+        a=new Integer[n];
+        for(int i=0;i<n;i++)a[i]=input.nextInt();
+       // Comparator<Integer> cmp=(x, y)->(x<y)?1:((x==y)?0:-1);
+        Arrays.sort(a);
+        int ans=0;
+        for(int i=n-1;i>=0;i-=k){
+            ans+=a[i]*2-2;
+        }
+        System.out.println(ans);
+    }
 }
 
