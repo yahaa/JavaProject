@@ -24,9 +24,16 @@ public class TestThread{
     }
 
     public static void testThread(){
-        new Thread(new PrintTask("zihua")).start();
+        try{
+        Thread tt=new Thread(new PrintTask("zihua"));
+        tt.start();
+        tt.sleep(1);
         new Thread(new PrintTask("yahaa")).start();
         new Thread(new PrintTask("HAOZI")).start();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static void testCallable(){
