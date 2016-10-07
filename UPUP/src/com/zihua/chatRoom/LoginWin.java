@@ -51,8 +51,8 @@ public class LoginWin {
                     System.out.println(pass);
                     if(user.compareTo("yahaa")==0&&pass.compareTo("123")==0){
                         JOptionPane.showMessageDialog(null, "登录成功，欢迎您：" + username.getText());
-                        f.setVisible(false);
-                        QQFrame a=new QQFrame();
+                        //f.setVisible(false);
+                        ChatHall a=new ChatHall(username.getText());
                     }
                     else {
                         JOptionPane.showMessageDialog(null, "用户名密码错误，请重新输入");

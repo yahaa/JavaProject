@@ -14,12 +14,18 @@ import javax.swing.*;
  * Created by zihua on 16-10-7.
  */
 public class ChatHall {
+    public static String user;
     JFrame f;
     MyPanel jp1;
     MyPanel jp2;
     MyPanel jp3;
     MyPanel jp4;
-    public ChatHall(){
+    JPanel center2;
+
+
+
+    public ChatHall(String user){
+        this.user=user;
         try{
             BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
             BeautyEyeLNFHelper.launchBeautyEyeLNF();
@@ -27,10 +33,9 @@ public class ChatHall {
             f=new JFrame("聊天室厅");
             JPanel center=new JPanel(new GridLayout(2,1));
             JPanel center1=new JPanel();
-            JPanel center2=new JPanel(new GridLayout(4,1));
+            center2=new JPanel(new GridLayout(4,1));
 
-
-            JLabel picu=new JLabel(new ImageIcon("Images/destory.gif"));
+            JLabel picu=new JLabel(new ImageIcon("Images/mao1.gif"));
             center1.add(picu);
 
             jp1=new MyPanel("展开群聊");
@@ -47,8 +52,8 @@ public class ChatHall {
             center.add(center2);
 
             f.add(center);
-            f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            f.setSize(200,400);
+            //f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            f.setSize(240,400);
             f.setVisible(true);
             f.setLocation(200,200);
 
@@ -59,18 +64,25 @@ public class ChatHall {
         }
     }
 
-    public static void main(String[]args){
-        new ChatHall();
+    public void operater(){
+
     }
+
+
+
+    //public static void main(String[]args){
+       // new ChatHall();
+   // }
 
 
 }
 
 class MyPanel extends JPanel{
+
     private JButton name;
     public MyPanel(){
         name=new JButton("OK");
-        this.add(name);
+        this.add(name,JPanel.LEFT_ALIGNMENT);
     }
 
     public MyPanel(String names){
@@ -80,6 +92,12 @@ class MyPanel extends JPanel{
             name=new JButton(names);
             name.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.green));
             this.add(name);
+            name.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                   ChatClient tu= new ChatClient(ChatHall.user);
+                }}
+            );
         }
         catch (Exception e){
             e.printStackTrace();
