@@ -1,6 +1,7 @@
 package com.zihua.test;
 import java.util.*;
 import java.util.concurrent.*;
+
 /**
  * Created by zihua on 16-10-4.
  */
@@ -55,10 +56,31 @@ public class TestThread{
     }
 
 
+    public static void testSleep(){
+        Thread t=new Thread(new PrintTask3());
+        try{
+            t.sleep(1000);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        System.out.println(t.getPriority()+"jjjj");
+        t.setPriority(4);
+        System.out.println(t.getPriority());
+        System.out.println(t.isAlive());
+        System.out.println(t.getName());
+        t.start();
+
+
+    }
+
+
+
     public static void main(String[]args){
         // testThreadPool();
         // testThread();
-        testCallable();
+        //testCallable();
+        testSleep();
 
     }
 }
@@ -90,6 +112,12 @@ class PrintTask2 implements Callable<String>{
     @Override
     public String call(){
         return "hahaha"+id;
+    }
+}
+
+class PrintTask3 implements Runnable{
+    public void run(){
+        for(int i=0;i<100;i++)System.out.println(i);
     }
 }
 

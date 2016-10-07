@@ -42,8 +42,7 @@ public class QQFrame extends JFrame {
         this.setVisible(true);
     }
 
-    public static void main(String[]args){
-        QQFrame a=new QQFrame();
-    }
+    //public static void main(String[]args){
+   // }
 
 }
