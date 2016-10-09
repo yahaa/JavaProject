@@ -20,6 +20,7 @@ public class A58 {
     }
 
     public static void main(String[]args){
+        System.out.println("hahaha");
         A58 a=new A58();
         a.solve();
     }
