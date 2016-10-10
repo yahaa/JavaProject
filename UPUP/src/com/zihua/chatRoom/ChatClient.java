@@ -60,13 +60,7 @@ public class ChatClient {
     private DataInputStream dis = null;
     private boolean bConnected = false;
 
-
-//    public static void main(String args[]) {
-//        Scanner input=new Scanner(System.in);
-//        String name=input.nextLine();
-//        ChatClient c = new ChatClient(name);
-//    }
-
+    private Thread tt=null;
 
     public ChatClient(String username){
         lunachLogin(username);
@@ -75,7 +69,7 @@ public class ChatClient {
     //登陆对话框
     public void lunachLogin(String name){
         connect();
-        String str = "L" +name;// trim去掉两边空格
+        String str = "L" +name;
         str=str.replaceAll("[ ]+"," ");
         user = new JLabel(name);
         try {
@@ -92,7 +86,7 @@ public class ChatClient {
     //登陆后显示界面
     public void lunachWork(){
         jf.setLocation(300, 300);
-        jf.setSize(250,300);
+        jf.setSize(600,300);
         Container jFramecontentPane = jf.getContentPane();
         showMessage.setEditable(false);
         JScrollPane js = new JScrollPane(showMessage);
@@ -119,10 +113,14 @@ public class ChatClient {
 
                 }
                 catch (IOException e1) {
-                    e1.printStackTrace();
+                    //e1.printStackTrace();
                 }
-                System.exit(0);
-                disconnect();
+                finally {
+
+                    System.exit(0);
+                    disconnect();
+                }
+
             }
         });
 
@@ -148,12 +146,14 @@ public class ChatClient {
                         dos.flush();
                     }
                     catch (IOException e1) {
-                        e1.printStackTrace();
+                       // e1.printStackTrace();
                     }
                 }
             }
         });
-        new Thread(new ReceiveThread()).start();
+
+        tt=new Thread(new ReceiveThread());
+        tt.start();
     }
 
     //连接服务器
@@ -162,26 +162,28 @@ public class ChatClient {
             s= new Socket("115.29.146.79",8888);
             dos =new DataOutputStream(s.getOutputStream());
             dis =new DataInputStream(s.getInputStream());
-            System.out.println("连接服务器成功！");
+            //System.out.println("连接服务器成功！");
             bConnected=true;
         }
         catch (UnknownHostException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
         catch (IOException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
     }
 
     //与服务器断开
     public void disconnect(){
         try {
+            bConnected=false;
             dis.close();
             dos.close();
             s.close();
+
         }
         catch (Exception e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
     }
 
@@ -189,7 +191,7 @@ public class ChatClient {
         public void run() {
             try{
                 while(bConnected){
-                    String str = dis.readUTF();
+                    String str=dis.readUTF();
                     if(str.charAt(0) == 'W'){
                         workstr = str.substring(1);
                         showMessage.setText(showMessage.getText()+workstr+'\n');
@@ -211,7 +213,7 @@ public class ChatClient {
                 }
             }
             catch(IOException e){
-                e.printStackTrace();
+               // e.printStackTrace();
             }
         }
     }

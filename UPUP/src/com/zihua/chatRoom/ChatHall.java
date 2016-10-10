@@ -14,7 +14,7 @@ import javax.swing.*;
  * Created by zihua on 16-10-7.
  */
 public class ChatHall {
-    public static String user;
+
     JFrame f;
     MyPanel jp1;
     MyPanel jp2;
@@ -22,10 +22,8 @@ public class ChatHall {
     MyPanel jp4;
     JPanel center2;
 
+    public ChatHall(){
 
-
-    public ChatHall(String user){
-        this.user=user;
         try{
             BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
             BeautyEyeLNFHelper.launchBeautyEyeLNF();
@@ -35,7 +33,7 @@ public class ChatHall {
             JPanel center1=new JPanel();
             center2=new JPanel(new GridLayout(4,1));
 
-            JLabel picu=new JLabel(new ImageIcon("Images/mao1.gif"));
+            JLabel picu=new JLabel(new ImageIcon("Images/jiao.gif"));
             center1.add(picu);
 
             jp1=new MyPanel("展开群聊");
@@ -55,6 +53,7 @@ public class ChatHall {
             //f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             f.setSize(240,400);
             f.setVisible(true);
+            f.setIconImage(new ImageIcon("Images/haha.jpg").getImage());
             f.setLocation(200,200);
 
         }
@@ -64,15 +63,9 @@ public class ChatHall {
         }
     }
 
-    public void operater(){
-
+    public static void main(String[]args){
+        new ChatHall();
     }
-
-
-
-    //public static void main(String[]args){
-       // new ChatHall();
-   // }
 
 
 }
@@ -95,7 +88,7 @@ class MyPanel extends JPanel{
             name.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                   ChatClient tu= new ChatClient(ChatHall.user);
+                   LoginWin loginWin=new LoginWin();
                 }}
             );
         }
@@ -104,7 +97,6 @@ class MyPanel extends JPanel{
         }
 
     }
-
 
 }
 

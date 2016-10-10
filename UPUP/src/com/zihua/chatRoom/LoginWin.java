@@ -47,12 +47,12 @@ public class LoginWin {
                 public void mouseClicked(MouseEvent e){
                     String user=username.getText();
                     String pass=new String(password.getPassword());
-                    System.out.println(user);
-                    System.out.println(pass);
-                    if(user.compareTo("yahaa")==0&&pass.compareTo("123")==0){
+                    //System.out.println(user);
+                    //System.out.println(pass);
+                    if(user.length()>0&&pass.length()>0){
                         JOptionPane.showMessageDialog(null, "登录成功，欢迎您：" + username.getText());
-                        //f.setVisible(false);
-                        ChatHall a=new ChatHall(username.getText());
+                        f.setVisible(false);
+                        ChatClient chatClient=new ChatClient(username.getText());
                     }
                     else {
                         JOptionPane.showMessageDialog(null, "用户名密码错误，请重新输入");
@@ -113,7 +113,9 @@ public class LoginWin {
         f.setUndecorated(true);
         f.setVisible(true);
         f.setBounds(300, 100, 500, 350);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setIconImage(new ImageIcon("Images/qqIcon.jpg").getImage());
+
+        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 
     }
@@ -151,10 +153,10 @@ public class LoginWin {
         return mi;
     }
 
-    public static void main(String[] args){
-        UIManager.put("RootPane.setupButtonVisible",false);
-        new LoginWin();
-    }
+//    public static void main(String[] args){
+//        UIManager.put("RootPane.setupButtonVisible",false);
+//        new LoginWin();
+//    }
 }
 
 
