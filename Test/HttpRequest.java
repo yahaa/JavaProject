@@ -9,6 +9,9 @@ import java.util.Map;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.io.OutputStreamWriter;
+import org.json.JSONObject;
+
+
 public class HttpRequest {
     
     final static String url = "";  
@@ -126,7 +129,8 @@ public class HttpRequest {
     public static void main(String[] args) {  
         String p="method=next&params=%7B%22limit%22%3A20%2C%22offset%22%3A20%7D";
         String s=sendPost("http://www.zhihu.com/node/ExploreRecommendListV2",p);  
-        System.out.println(s);
+        JSONObject json=new JSONObject(s);
+        System.out.println(json);
     }  
 }
 
