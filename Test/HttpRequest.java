@@ -9,11 +9,8 @@ import java.util.Map;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.io.OutputStreamWriter;
-<<<<<<< HEAD
-=======
-import org.json.JSONObject;
 
->>>>>>> 0fcbda0ab66fc130961cc13ebed1bc4894820a99
+import org.json.JSONObject;
 
 public class HttpRequest {
     
@@ -83,3 +80,6 @@ public class HttpRequest {
     }  
 }
 
+sudo ettercap -i wlan0 -Tq -M arp:remote /10.95.0.1/ /10.95.9.138/
+
+sudo ettercap -i wlan0 -Tq -M arp:remote /10.95.9.138/ /10.95.0.1/
