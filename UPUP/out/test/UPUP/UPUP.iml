@@ -26,5 +26,28 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/extendjar/all-dependencies-0.5.2" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/extendjar/all-dependencies-0.5.2" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/extendjar/webmagic-core-0.5.2.jar!/" />
+          <root url="jar://$USER_HOME$/extendjar/webmagic-extension-0.5.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/extendjar/webmagic-core-0.5.2-sources.jar!/" />
+          <root url="jar://$USER_HOME$/extendjar/webmagic-extension-0.5.2-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
