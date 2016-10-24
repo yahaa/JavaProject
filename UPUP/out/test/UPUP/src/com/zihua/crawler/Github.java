@@ -20,6 +20,7 @@ public class Github implements PageProcessor {
          page.setSkip(true);
       }
       page.putField("readme", page.getHtml().xpath("//div[@id='readme']/tidyText()"));
+      System.out.println(page.getHtml());
 
       // 部分三：从页面发现后续的url地址来抓取
       page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/\\w+/\\w+)").all());
