@@ -80,6 +80,3 @@ public class HttpRequest {
     }  
 }
 
-sudo ettercap -i wlan0 -Tq -M arp:remote /10.95.0.1/ /10.95.9.138/
-
-sudo ettercap -i wlan0 -Tq -M arp:remote /10.95.9.138/ /10.95.0.1/
