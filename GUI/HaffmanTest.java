@@ -6,7 +6,11 @@ public class HaffmanTest{
 	private Tree haffmanTree=null;
 	private int id;
 	private String []in=null;
+<<<<<<< HEAD
 	private int []ttt;
+=======
+	private int []inNumbet;
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
 	private Map<String,String>mp=new HashMap<String,String>();
 
 	private void clearQu(){
@@ -20,19 +24,31 @@ public class HaffmanTest{
 			clearQu();
 			int n=input.nextInt();
 			in=new String[n];
+<<<<<<< HEAD
 			ttt=new int[n];
+=======
+			inNumbet=new int[n];
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
 			for(int k=0;k<n;k++){
 				int value=input.nextInt();
 				qu.offer(new Tree(value,id));
 				in[k]=value+" "+id;
+<<<<<<< HEAD
 				ttt[k]=value;
+=======
+				inNumbet[k]=value;
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
 				id++;
 			}
 			buildTree();
 			System.out.println("Case "+i);
 			haffmanTree.preOrder(haffmanTree,"",mp);
 			for(int ii=0;ii<n;ii++){
+<<<<<<< HEAD
 				System.out.println(ttt[ii]+" "+mp.get(in[ii]));
+=======
+				System.out.println(inNumbet[ii]+" "+mp.get(in[ii]));
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
 			}
 			
 		}
@@ -78,8 +94,11 @@ class Tree implements Comparable<Tree>{
 		nodes+=leftChild.nodes;
 	}
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
 	public void setRightChild(Tree rightChild){
 		this.rightChild=rightChild;
 		this.nodes+=rightChild.nodes;
@@ -114,6 +133,7 @@ class Tree implements Comparable<Tree>{
 			mp.put(node.value+" "+node.id,node.code);
 			return ;
 		}
+<<<<<<< HEAD
 
 		preOrder(node.getLeft(),s+"0",mp);
 		preOrder(node.getRight(),s+"1",mp);
@@ -121,6 +141,13 @@ class Tree implements Comparable<Tree>{
 
 	}
 
+=======
+		preOrder(node.getLeft(),s+"0",mp);
+		preOrder(node.getRight(),s+"1",mp);
+	}
+
+	
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
 	public int compareTo(Tree tree){
 		if(value<tree.value)return -1;
 		else if(value>tree.value)return 1;
@@ -130,12 +157,18 @@ class Tree implements Comparable<Tree>{
 			else return 0;
 		}
 	}
+<<<<<<< HEAD
 
+=======
+	
+	@Override
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
 	public String toString(){
 		return value.toString()+" "+code;
 	}
 
 }
+<<<<<<< HEAD
 
 class Two implements Comparable<Two>{
 		int value,id;
@@ -161,3 +194,5 @@ class Two implements Comparable<Two>{
 			}
 		}
 }
+=======
+>>>>>>> f24c3b0f593c53a98db296838f13d34c0b239e0b
