@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ba565c-5ef5-4899-910d-33f3337a8317" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Github.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Github.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/A149.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/A149.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/B427.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/B427.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/Test1.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/Test1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/TestLambda.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/test/TestLambda.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/spider.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/HTMLParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Sprider.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/TSprider.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/TSprider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/XinLang.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/XinLang.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UPUP.iml" afterPath="$PROJECT_DIR$/UPUP.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/test/UPUP/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/UPUP.iml" afterPath="$PROJECT_DIR$/out/test/UPUP/UPUP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/Github.java" afterPath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/Github.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zihua/crawler/Github.java" afterPath="$PROJECT_DIR$/src/com/zihua/crawler/Github.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/TSprider.java" afterPath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/TSprider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/XinLang.java" afterPath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/XinLang.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java" afterPath="$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" afterPath="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" />
     </list>
     <ignored path="UPUP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +44,7 @@
       <file leaf-file-name="Github.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/Github.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="525">
               <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,35 +53,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XinLang.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="XinLang.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="71" column="81" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
+            <state relative-caret-position="168">
+              <caret line="141" column="52" selection-start-line="141" selection-start-column="52" selection-end-line="141" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#734#742#0" expanded="true" />
-                <element signature="e#926#927#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1333#1334#0" expanded="true" />
-                <element signature="e#1362#1363#0" expanded="true" />
-                <element signature="e#1471#1472#0" expanded="true" />
-                <element signature="e#1501#1502#0" expanded="true" />
+                <marker date="1477739283624" expanded="true" signature="1873:1911" ph="select * fro... host_search" />
+                <marker date="1477739283624" expanded="true" signature="1939:1969" ph="update host_... " />
+                <marker date="1477739283624" expanded="true" signature="1999:2030" ph="INSERT INTO student... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TSprider.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TSprider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+            <state relative-caret-position="2709">
+              <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#834#849#0" expanded="true" />
-                <element signature="e#3591#3592#0" expanded="true" />
-                <element signature="e#3676#3677#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +111,8 @@
         <option value="$PROJECT_DIR$/src/com/zihua/crawler/TestWebmagic.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/test/CharacterTest.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/crawler/Github.java" />
-        <option value="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java" />
+        <option value="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" />
       </list>
     </option>
   </component>
@@ -136,9 +130,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1440" />
-    <option name="height" value="876" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -165,9 +159,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -183,6 +177,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="UPUP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UPUP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UPUP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,14 +245,14 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java/javabao/jsoup-1.9.2.jar!/" />
+    <property name="last_opened_file_path" value="/opt/jdk1.8.0_65/jre/lib/ext/mysql-connector-java-5.1.39-bin.jar!/" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.TSprider">
+  <component name="RunManager" selected="Application.XinLang">
     <configuration default="false" name="Github" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -259,27 +271,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="UPUP" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in UPUP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="UPUP" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="false" name="CharacterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -340,6 +331,32 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="UPUP" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="META-INF in UPUP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="META-INF.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="UPUP" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="META-INF" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -758,18 +775,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Github" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in UPUP" />
-      <item index="2" class="java.lang.String" itemvalue="Application.CharacterTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.XinLang" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TSprider" />
+      <item index="1" class="java.lang.String" itemvalue="Application.CharacterTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.XinLang" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TSprider" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.META-INF in UPUP" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TSprider" />
-        <item index="1" class="java.lang.String" itemvalue="Application.XinLang" />
-        <item index="2" class="java.lang.String" itemvalue="Application.CharacterTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Github" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in UPUP" />
+        <item index="0" class="java.lang.String" itemvalue="Application.XinLang" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.META-INF in UPUP" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TSprider" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CharacterTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Github" />
       </list>
     </recent_temporary>
   </component>
@@ -808,7 +825,8 @@
       <workItem from="1477299751434" duration="2827000" />
       <workItem from="1477460921380" duration="593000" />
       <workItem from="1477464057165" duration="1373000" />
-      <workItem from="1477661738638" duration="16231000" />
+      <workItem from="1477661738638" duration="40285000" />
+      <workItem from="1477737984969" duration="1502000" />
     </task>
     <servers />
   </component>
@@ -819,12 +837,15 @@
     <history-entry file="All_in_UPUP - 2016.10.24 at 15h 14m 39s.xml">
       <configuration name="All in UPUP" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="META-INF_in_UPUP - 2016.10.29 at 18h 39m 05s.xml">
+      <configuration name="META-INF in UPUP" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45244000" />
+    <option name="totallyTimeSpent" value="70800000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1440" height="876" extended-state="6" />
+    <frame x="0" y="-4" width="1440" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -832,14 +853,14 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32880846" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.76477987" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7012987" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17152777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17769784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -901,14 +922,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/zihua/test/CharacterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/Github.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1210,7 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1218,13 +1230,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/Github.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
+        <state relative-caret-position="525">
           <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1232,32 +1243,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="71" column="81" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
+        <state relative-caret-position="2709">
+          <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#734#742#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="141" column="52" selection-start-line="141" selection-start-column="52" selection-end-line="141" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#834#849#0" expanded="true" />
-            <element signature="e#3591#3592#0" expanded="true" />
-            <element signature="e#3676#3677#0" expanded="true" />
+            <marker date="1477739283624" expanded="true" signature="1873:1911" ph="select * fro... host_search" />
+            <marker date="1477739283624" expanded="true" signature="1939:1969" ph="update host_... " />
+            <marker date="1477739283624" expanded="true" signature="1999:2030" ph="INSERT INTO student... " />
           </folding>
         </state>
       </provider>
@@ -1267,11 +1278,20 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="artifact" />
+              <type id="library" />
+              <type id="javaee-facet-resources" />
+              <type id="jpa-descriptors" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>spider</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

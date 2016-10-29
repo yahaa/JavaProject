@@ -1,6 +1,7 @@
 package com.zihua.crawler;
 
 import org.apache.http.Header;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
@@ -11,10 +12,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -70,18 +74,25 @@ public class TSprider {
 
         String result=null;
         try{
+
             HttpResponse response = HttpClients.createDefault().execute(httpGet);
             if(response.getStatusLine().getStatusCode()==200){
-                result = EntityUtils.toString(response.getEntity());
+                HttpEntity entity=response.getEntity();
+                BufferedReader input=new BufferedReader(new InputStreamReader(entity.getContent()));
+                String line=null;
+                while((line=input.readLine())!=null){
+                    result+=line;
+                }
+                System.out.println(result);
             }
-            Matcher m=pattern.matcher(result);
-            while(m.find())
-                result=m.group(0);
-            System.out.println(result);
-            Document document=Jsoup.parse(result);
-            System.out.println(document);
-            Elements tr=document.getElementsByAttributeValue("class","star_name");
-            System.out.println(tr.size());
+//            Matcher m=pattern.matcher(result);
+//            while(m.find())
+//                result=m.group(0);
+//            System.out.println(result);
+//            Document document=Jsoup.parse(result);
+//            //System.out.println(document);
+//            Elements tr=document.getElementsByAttributeValue("class","star_name");
+//            System.out.println(tr.size());
 
 
 
@@ -92,8 +103,57 @@ public class TSprider {
 
     }
 
+
+    public static String sendGet(String url) {
+        String result = "";
+        BufferedReader in = null;
+        try {
+            String urlNameString = url;
+            URL realUrl = new URL(urlNameString);
+
+            URLConnection connection = realUrl.openConnection();
+
+            connection.setRequestProperty("accept", "*/*");
+            connection.setRequestProperty("connection", "Keep-Alive");
+            connection.setRequestProperty("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+            connection.connect();
+            connection.setConnectTimeout(3000);
+            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String line;
+            while ((line = in.readLine()) != null) {
+                result += line;
+            }
+        } catch (Exception e) {
+            System.out.println("发送GET请求出现异常！" + e);
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                if (in != null) {
+                    in.close();
+                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+
+    public static void parers(String html){
+        Document doc=Jsoup.parse(html);
+        Elements elements=doc.select("tr[action-type]");
+        System.out.println(elements.size());
+        for(Element e:elements){
+            System.out.println(e.text());
+        }
+    }
+
     public static void main(String[]args){
-        new TSprider("http://s.weibo.com/top/summary?cate=realtimehot").run();
+
+       String result= TSprider.sendGet("http://s.weibo.com/top/summary?cate=realtimehot");
+        parers(result);
+
     }
 
 }
