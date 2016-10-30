@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ba565c-5ef5-4899-910d-33f3337a8317" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/HTMLParser.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Sprider.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/TSprider.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/TSprider.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/UPUP/.idea/artifacts/spider.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/spider.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/spider2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spider/spider.jar" afterPath="$PROJECT_DIR$/out/artifacts/spider/spider.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Spider.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Spider.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/XinLang.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/XinLang.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UPUP.iml" afterPath="$PROJECT_DIR$/UPUP.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/test/UPUP/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/UPUP.iml" afterPath="$PROJECT_DIR$/out/test/UPUP/UPUP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/TSprider.java" afterPath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/TSprider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/XinLang.java" afterPath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/XinLang.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java" afterPath="$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" afterPath="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" />
     </list>
     <ignored path="UPUP.iws" />
@@ -45,9 +43,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
               <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,13 +51,13 @@
       <file leaf-file-name="XinLang.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+            <state relative-caret-position="273">
+              <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1477739283624" expanded="true" signature="1873:1911" ph="select * fro... host_search" />
-                <marker date="1477739283624" expanded="true" signature="1939:1969" ph="update host_... " />
-                <marker date="1477739283624" expanded="true" signature="1999:2030" ph="INSERT INTO student... " />
+                <marker date="1477789375622" expanded="true" signature="608:646" ph="select * fro... host_search" />
+                <marker date="1477789375622" expanded="true" signature="674:704" ph="update host_... " />
+                <marker date="1477789375622" expanded="true" signature="734:765" ph="INSERT INTO host_search... " />
               </folding>
             </state>
           </provider>
@@ -72,9 +68,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2709">
               <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,9 +123,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1440" />
-    <option name="height" value="904" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -158,9 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,6 +230,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -825,7 +819,9 @@
       <workItem from="1477460921380" duration="593000" />
       <workItem from="1477464057165" duration="1373000" />
       <workItem from="1477661738638" duration="40285000" />
-      <workItem from="1477737984969" duration="1398000" />
+      <workItem from="1477737984969" duration="1502000" />
+      <workItem from="1477751888853" duration="5156000" />
+      <workItem from="1477789312816" duration="70000" />
     </task>
     <servers />
   </component>
@@ -841,15 +837,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70696000" />
+    <option name="totallyTimeSpent" value="76026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1440" height="904" extended-state="6" />
+    <frame x="0" y="24" width="1440" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -861,7 +856,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17769784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964029" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -870,6 +865,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32880846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1236,9 +1232,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,9 +1240,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2709">
           <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,13 +1253,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+        <state relative-caret-position="273">
+          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1477739283624" expanded="true" signature="1873:1911" ph="select * fro... host_search" />
-            <marker date="1477739283624" expanded="true" signature="1939:1969" ph="update host_... " />
-            <marker date="1477739283624" expanded="true" signature="1999:2030" ph="INSERT INTO student... " />
+            <marker date="1477789375622" expanded="true" signature="608:646" ph="select * fro... host_search" />
+            <marker date="1477789375622" expanded="true" signature="674:704" ph="update host_... " />
+            <marker date="1477789375622" expanded="true" signature="734:765" ph="INSERT INTO host_search... " />
           </folding>
         </state>
       </provider>
@@ -1279,13 +1271,13 @@
         <settings>
           <artifact-editor>
             <show-content>
+              <type id="jpa-descriptors" />
               <type id="artifact" />
               <type id="library" />
               <type id="javaee-facet-resources" />
-              <type id="jpa-descriptors" />
             </show-content>
           </artifact-editor>
-          <last-edited>spider</last-edited>
+          <last-edited>spider2.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

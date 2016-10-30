@@ -9,9 +9,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.sql.*;
-import java.util.LinkedList;
-import java.util.Queue;
-
 
 
 /**
@@ -24,16 +21,15 @@ public class XinLang{
    }
 }
 
-
 class Spider {
-
     private String url=null;
     private String result=null;
-
+    private String qsql="select * from host_search where topic=";
+    private String usql="update host_search set rating=";
+    private String insql ="INSERT INTO host_search VALUES(";
 
     public Spider(String url){
         this.url=url;
-
     }
 
     public void run(){
@@ -42,22 +38,25 @@ class Spider {
             String tre = parers(sendGet(url));
             String[] tres = tre.split("[\n]");
             insertToMysql(tres);
-            long current=System.currentTimeMillis();
-            long total=(current-start)/1000;
-            long day=total/(3600*24);
-            total%=(3600*24);
-            long hour=total/3600;
-            total%=3600;
-            long min=total/60;
-            total%=60;
-            long second=total;
-            System.out.println("当前运行 "+day+" 天 "+hour+" 小时 "+min+" 分 "+total+" 秒 ");
+            runTime(start);
             try {
-                Thread.sleep(5000);
+                Thread.sleep(5000*6);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    private void runTime(long start){
+        long current=System.currentTimeMillis();
+        long total=(current-start)/1000;
+        long day=total/(3600*24);
+        total%=(3600*24);
+        long hour=total/3600;
+        total%=3600;
+        long min=total/60;
+        total%=60;
+        System.out.println("当前运行 "+day+" 天 "+hour+" 小时 "+min+" 分 "+total+" 秒 ");
     }
 
     private void insertToMysql(String[]data){
@@ -66,49 +65,37 @@ class Spider {
             Class.forName("com.mysql.jdbc.Driver") ;
             String u ="jdbc:mysql://localhost:3306/Crawler?useUnicode=true&characterEncoding=gbk";
             conn = DriverManager.getConnection(u,"root","  ") ;
-
             Statement statement=conn.createStatement();
 
-            String qsql="select * from host_search where topic=";
-            String usql="update host_search set rating=";
-            String insql ="INSERT INTO host_search VALUES(";
-
-
             for(int i=0;i<data.length;i++){
-
                 String []t=data[i].split("[ ]");
                 String topic="";
                 for(int j=1;j<t.length-1;j++){
                     topic+=t[j];
                 }
-                if(topic==null)continue;
+                if(topic.length()==0)continue;
                 int len=t.length;
                 Integer rating=Integer.valueOf(t[len-1]);
                 String qu=qsql+"\""+topic+"\"";
                 ResultSet result=statement.executeQuery(qu);
 
-                //System.out.println(qu);
                 boolean exist=false;
                 Integer te=0;
                 while(result.next()){
                     exist=true;
                     te=result.getInt(1);
-                    //System.out.println(result.getString(2)+" "+te);
                 }
 
-                if(exist){
-                    String update=usql+te;
+                if(exist&&rating-te>0){
+                    String update=usql+rating;
                     update+=" where topic="+"\""+topic+"\"";
                     statement.executeUpdate(update);
-                    //System.out.println(update);
                 }
-                else {
-
+                else if(!exist) {
                     String insert=insql+rating+","+"\""+topic+"\")";
                     Statement stmt = conn.createStatement();
-                    //System.out.println(insert);
                     stmt.execute(insert);
-
+                    stmt.close();
                 }
 
             }
@@ -170,8 +157,5 @@ class Spider {
         return  result;
     }
 
-
 }
-
-
 
