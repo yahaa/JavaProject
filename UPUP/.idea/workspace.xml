@@ -5,10 +5,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/HTMLParser.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Sprider.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/UPUP/.idea/artifacts/spider.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/spider.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/spider2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spider/spider.jar" afterPath="$PROJECT_DIR$/out/artifacts/spider/spider.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spider2_0/spider2.0.jar" afterPath="$PROJECT_DIR$/out/artifacts/spider2_0/spider2.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Spider.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Spider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/XinLang.class" afterPath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/XinLang.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/test/UPUP/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/XinLang.java" afterPath="$PROJECT_DIR$/out/test/UPUP/src/com/zihua/crawler/XinLang.java" />
@@ -51,13 +49,13 @@
       <file leaf-file-name="XinLang.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            <state relative-caret-position="21">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1477789375622" expanded="true" signature="608:646" ph="select * fro... host_search" />
-                <marker date="1477789375622" expanded="true" signature="674:704" ph="update host_... " />
-                <marker date="1477789375622" expanded="true" signature="734:765" ph="INSERT INTO host_search... " />
+                <marker date="1477790484438" expanded="true" signature="608:646" ph="select * fro... host_search" />
+                <marker date="1477790484438" expanded="true" signature="674:704" ph="update host_... " />
+                <marker date="1477790484438" expanded="true" signature="734:765" ph="INSERT INTO host_search... " />
               </folding>
             </state>
           </provider>
@@ -152,6 +150,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,7 +229,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
@@ -822,6 +820,8 @@
       <workItem from="1477737984969" duration="1502000" />
       <workItem from="1477751888853" duration="5156000" />
       <workItem from="1477789312816" duration="78000" />
+      <workItem from="1477789984173" duration="110000" />
+      <workItem from="1477790471693" duration="212000" />
     </task>
     <servers />
   </component>
@@ -837,7 +837,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76034000" />
+    <option name="totallyTimeSpent" value="76356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="876" extended-state="6" />
@@ -1253,13 +1253,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        <state relative-caret-position="21">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1477789375622" expanded="true" signature="608:646" ph="select * fro... host_search" />
-            <marker date="1477789375622" expanded="true" signature="674:704" ph="update host_... " />
-            <marker date="1477789375622" expanded="true" signature="734:765" ph="INSERT INTO host_search... " />
+            <marker date="1477790484438" expanded="true" signature="608:646" ph="select * fro... host_search" />
+            <marker date="1477790484438" expanded="true" signature="674:704" ph="update host_... " />
+            <marker date="1477790484438" expanded="true" signature="734:765" ph="INSERT INTO host_search... " />
           </folding>
         </state>
       </provider>

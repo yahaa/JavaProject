@@ -40,7 +40,7 @@ class Spider {
             insertToMysql(tres);
             runTime(start);
             try {
-                Thread.sleep(5000*6);
+                Thread.sleep(5000*3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -86,12 +86,12 @@ class Spider {
                     te=result.getInt(1);
                 }
 
-                if(exist&&rating-te>0){
+                if(exist){
                     String update=usql+rating;
                     update+=" where topic="+"\""+topic+"\"";
                     statement.executeUpdate(update);
                 }
-                else if(!exist) {
+                else {
                     String insert=insql+rating+","+"\""+topic+"\")";
                     Statement stmt = conn.createStatement();
                     stmt.execute(insert);
