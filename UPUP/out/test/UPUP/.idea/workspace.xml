@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ba565c-5ef5-4899-910d-33f3337a8317" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zihua/test/ThreadTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/HTMLParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UPUP/com/zihua/crawler/Sprider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/UPUP/.idea/artifacts/spider.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zihua/chatRoom/LoginWin.java" afterPath="$PROJECT_DIR$/src/com/zihua/chatRoom/LoginWin.java" />
     </list>
     <ignored path="UPUP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +28,23 @@
     <favorites_list name="UPUP" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ThreadTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/zihua/test/ThreadTest.java">
+    <leaf>
+      <file leaf-file-name="LoginWin.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/zihua/chatRoom/LoginWin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-951">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1300#1301#0" expanded="true" />
-                <element signature="e#1791#1792#0" expanded="true" />
-                <element signature="e#1819#1820#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="393">
+              <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zihua/chatRoom/ChatClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="211" column="21" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,7 +70,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/zihua/chatRoom/ChatClient.java" />
-        <option value="$PROJECT_DIR$/src/com/zihua/chatRoom/LoginWin.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/chatRoom/ChatHall.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/test/A58.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/network/HttpRequest.java" />
@@ -82,6 +82,8 @@
         <option value="$PROJECT_DIR$/src/com/zihua/crawler/TSprider.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/crawler/XinLang.java" />
         <option value="$PROJECT_DIR$/src/com/zihua/test/ThreadTest.java" />
+        <option value="$PROJECT_DIR$/src/com/zihua/game/GameTank1.java" />
+        <option value="$PROJECT_DIR$/src/com/zihua/chatRoom/LoginWin.java" />
       </list>
     </option>
   </component>
@@ -99,9 +101,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1440" />
-    <option name="height" value="904" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -128,7 +130,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -179,10 +180,6 @@
               <option name="myItemId" value="zihua" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -202,35 +199,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThreadTest.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UPUP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UPUP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zihua" />
+              <option name="myItemId" value="chatRoom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,27 +219,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.ThreadTest">
-    <configuration default="false" name="CharacterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.zihua.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.zihua.test.CharacterTest" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="UPUP" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.LoginWin">
     <configuration default="false" name="XinLang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -272,26 +228,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.zihua.crawler.XinLang" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="UPUP" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TSprider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.zihua.crawler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.zihua.crawler.TSprider" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -338,6 +274,46 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.zihua.test.ThreadTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="UPUP" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameTank1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.zihua.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.zihua.game.GameTank1" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="UPUP" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LoginWin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.zihua.chatRoom.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.zihua.chatRoom.LoginWin" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -765,19 +741,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CharacterTest" />
-      <item index="1" class="java.lang.String" itemvalue="Application.XinLang" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TSprider" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.META-INF in UPUP" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ThreadTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.XinLang" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.META-INF in UPUP" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ThreadTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GameTank1" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LoginWin" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ThreadTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.XinLang" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.META-INF in UPUP" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TSprider" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CharacterTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LoginWin" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GameTank1" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ThreadTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.XinLang" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.META-INF in UPUP" />
       </list>
     </recent_temporary>
   </component>
@@ -822,7 +798,10 @@
       <workItem from="1477789312816" duration="78000" />
       <workItem from="1477789984173" duration="110000" />
       <workItem from="1477790471693" duration="212000" />
-      <workItem from="1477879875564" duration="3389000" />
+      <workItem from="1477879875564" duration="6710000" />
+      <workItem from="1478579505700" duration="1532000" />
+      <workItem from="1478581077675" duration="22000" />
+      <workItem from="1478600866381" duration="211000" />
     </task>
     <servers />
   </component>
@@ -838,10 +817,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79745000" />
+    <option name="totallyTimeSpent" value="84831000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1440" height="904" extended-state="6" />
+    <frame x="0" y="24" width="1440" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -855,7 +834,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17769784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16187051" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964029" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -918,13 +897,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/Github.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zihua/crawler/Github.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1142,13 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zihua/chatRoom/LoginWin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2079">
-          <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xxxx.txt" />
     <entry file="file://$PROJECT_DIR$/writer.txt" />
     <entry file="file://$PROJECT_DIR$/print.txt" />
@@ -1194,13 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zihua/chatRoom/ChatClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="211" column="21" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///opt/jdk1.8.0_65/src.zip!/java/lang/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -1226,7 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2709">
           <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,12 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1477790484438" expanded="true" signature="608:646" ph="select * fro... host_search" />
-            <marker date="1477790484438" expanded="true" signature="674:704" ph="update host_... " />
-            <marker date="1477790484438" expanded="true" signature="734:765" ph="INSERT INTO host_search... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,21 +1205,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zihua/game/GameTank1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="118" column="56" selection-start-line="118" selection-start-column="56" selection-end-line="118" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zihua/test/ThreadTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-951">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1791#1792#0" expanded="true" />
-            <element signature="e#1819#1820#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="21">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zihua/chatRoom/ChatClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="211" column="21" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zihua/chatRoom/LoginWin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

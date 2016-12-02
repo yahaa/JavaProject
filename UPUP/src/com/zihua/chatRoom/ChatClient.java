@@ -16,9 +16,10 @@ import java.awt.event.WindowEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.lang.Thread;
+import java.lang.Runnable;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.Scanner;
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -221,3 +222,5 @@ public class ChatClient {
 
 
 }
+
+
