@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--这里是 aop 的五种实现方式 aop spring 的一大核心 -->
+    <aop:config>
+        <aop:aspect id="adviceaop" ref="advice">
+            <aop:pointcut expression="execution(* com.zihua.*.*(..))" id="mympoint"></aop:pointcut>
+            <aop:before method="doBefore" pointcut-ref="mympoint"></aop:before>
+            <aop:after method="doBefore" pointcut-ref="mympoint"></aop:after>
+           <!-- <aop:around method="doAround" pointcut-ref="mympoint"></aop:around>-->
+            <aop:after-returning method="doAfterReturn" pointcut-ref="mympoint"></aop:after-returning>
+            <aop:after-throwing method="doExcpetion" pointcut-ref="mympoint" throwing="ex"></aop:after-throwing>
+        </aop:aspect>
+    </aop:config>
+
+
+
+    <!-- 这里是spring DI （依赖注入的各种方式）依赖注入很好的实现了 IOC(控制反转）-->
+    <bean id="advice" class="com.zihua.advice.StudentAspect"></bean>
+
+    <bean id="zihua" class="com.zihua.model.Student">
+        <property name="name" value="zihua"></property>
+        <property name="age" value="22"></property>
+    </bean>
+
+    <bean id="xiaoqiang" class="com.zihua.model.People">
+        <property name="age" value="1000"></property>
+        <property name="name" value="xiaoqing"></property>
+    </bean>
+
+    <bean id="Jack" class="com.zihua.model.Dog">
+        <property name="name" value="jack"></property>
+    </bean>
+
+    <bean id="huang" class="com.zihua.model.People">
+        <constructor-arg index="0" value="huang"></constructor-arg>
+        <constructor-arg index="1" value="20"></constructor-arg>
+        <constructor-arg index="2" value="1"></constructor-arg>
+        <constructor-arg index="3" ref="Jack"></constructor-arg>
+    </bean>
+
+    <bean id="ming" class="com.zihua.model.People">
+        <property name="name" value="ming"></property>
+        <property name="age" value="1000"></property>
+        <property name="dog">
+            <bean class="com.zihua.model.Dog">
+                <property name="name" value="jcy"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="gao" class="com.zihua.model.People">
+        <property name="name" value="gao"></property>
+        <property name="age" value="666"></property>
+        <property name="id" value="11"></property>
+        <property name="dog">
+            <bean class="com.zihua.model.Dog">
+                <property name="name" value="yyy"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="yahaa" class="com.zihua.model.People">
+        <constructor-arg index="0" value="yahaa"></constructor-arg>
+        <constructor-arg index="1" value="12121"></constructor-arg>
+        <constructor-arg index="2" value="44"></constructor-arg>
+        <constructor-arg index="3">
+            <bean class="com.zihua.model.Dog">
+                <property name="name" value="jrr"></property>
+            </bean>
+        </constructor-arg>
+        <property name="hobbies">
+            <list>
+                <value>唱歌</value>
+                <value>跳舞</value>
+                <value>约炮</value>
+            </list>
+        </property>
+        <property name="works">
+            <map>
+                <entry>
+                    <key>
+                        <value>ggggo</value>
+                    </key>
+                    <value>好好啊高</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>haha</value>
+                    </key>
+                    <value>88888</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>
